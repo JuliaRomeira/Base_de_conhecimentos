@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local backend for testing without deploying.
+# Run `npx decap-server` and uncomment to use:
+# local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: https://example.com
+display_url: https://example.com
+logo_url: https://example.com/favicon.ico
+
+locale: 'pt'
+
+collections:
+  - name: "manuais"
+    label: "Manuais"
+    label_singular: "Manual"
+    folder: "content"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} — {{category}}"
+    nested:
+      depth: 2
+    path: "{{fields.category}}/{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - label: "Categoria"
+        name: "category"
+        widget: "relation"
+        collection: "categorias"
+        file: "categorias_lista"
+        value_field: "items.*.slug"
+        search_fields: ["items.*.title"]
+        display_fields: ["items.*.title"]
+      - { label: "Descrição", name: "description", widget: "string", required: false }
+      - { label: "Ordem", name: "order", widget: "number", required: false, default: 0, value_type: "int" }
+      - label: "Conteúdo"
+        name: "body"
+        widget: "markdown"
+        modes: ["raw", "rich_text"]
+        buttons: ["bold", "italic", "code", "link", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image", "code-block"]
+
+  - name: "categorias"
+    label: "Categorias"
+    files:
+      - file: "content/categories.json"
+        label: "Lista de categorias"
+        name: "categorias_lista"
+        fields:
+          - label: "Categorias"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Slug (URL)", name: "slug", widget: "string", hint: "Use letras minúsculas e hífens. Ex: primeiros-passos" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "string" }
+              - { label: "Ícone (Lucide)", name: "icon", widget: "string", default: "BookOpen", hint: "Nome do ícone em lucide.dev/icons (ex: Rocket, Settings, HelpCircle)" }

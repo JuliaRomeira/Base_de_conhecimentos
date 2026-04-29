@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "slug": "primeiros-passos",
+      "title": "Primeiros Passos",
+      "description": "Tudo que você precisa para começar a usar o sistema.",
+      "icon": "Rocket"
+    },
+    {
+      "slug": "configuracoes",
+      "title": "Configurações",
+      "description": "Personalize o sistema de acordo com suas necessidades.",
+      "icon": "Settings"
+    },
+    {
+      "slug": "faq",
+      "title": "FAQ",
+      "description": "Respostas para as perguntas mais frequentes.",
+      "icon": "HelpCircle"
+    }
+  ]
+}

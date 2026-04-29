@@ -1,0 +1,201 @@
+GUIA RAPIDO DO ADMIN
+Central de Conhecimento da Facil Informatica
+
+Este guia foi feito para a equipe que vai cadastrar e manter os manuais do portal.
+
+1. O que e este painel
+
+O /admin e a area onde a equipe pode:
+
+- criar manuais
+- editar manuais
+- excluir manuais
+- criar categorias
+- editar categorias
+- enviar imagens para os artigos
+
+2. Quem pode acessar
+
+No momento, 3 pessoas da equipe terao acesso ao admin.
+
+Cada pessoa precisa:
+
+- receber o convite de acesso
+- criar sua senha
+- entrar pelo link do painel
+
+3. Como entrar no admin
+
+1. Acesse o endereco do site
+2. Depois entre em /admin
+3. Faça login com seu usuario e senha
+
+Exemplo:
+
+https://seu-site.netlify.app/admin/
+
+4. Como criar um manual
+
+1. Entre no admin
+2. Clique em "Manuais"
+3. Clique para criar um novo manual
+4. Preencha os campos:
+
+- Titulo
+- Categoria
+- Descricao
+- Ordem
+- Conteudo
+
+5. Revise o texto
+6. Clique em Publish para publicar
+
+5. Como editar um manual
+
+1. Entre no admin
+2. Clique em "Manuais"
+3. Abra o manual desejado
+4. Faça as alteracoes
+5. Clique em Publish para salvar a nova versao
+
+6. Como excluir um manual
+
+1. Entre no admin
+2. Clique em "Manuais"
+3. Abra o manual desejado
+4. Use a opcao de excluir
+5. Confirme a exclusao
+
+Importante:
+
+- ao excluir, o manual sai do site depois da publicacao
+- tenha certeza antes de apagar
+
+7. Como criar uma categoria
+
+1. Entre no admin
+2. Clique em "Categorias"
+3. Abra a lista de categorias
+4. Adicione uma nova categoria com:
+
+- slug
+- titulo
+- descricao
+- icone
+
+8. O que e cada campo da categoria
+
+slug:
+- nome tecnico usado na URL
+- usar letras minusculas e hifens
+- exemplo: primeiros-passos
+
+titulo:
+- nome visivel no site
+- exemplo: Primeiros Passos
+
+descricao:
+- texto curto explicando a categoria
+
+icone:
+- nome de um icone da biblioteca Lucide
+- exemplo: BookOpen, Settings, HelpCircle
+
+9. Como usar imagens
+
+Voce pode adicionar imagens nos manuais.
+
+Exemplos de uso:
+
+- print de tela
+- passo a passo visual
+- imagens explicativas
+
+Se o painel permitir upload:
+
+1. no editor do manual, use o botao de imagem
+2. envie o arquivo
+3. insira no conteudo
+
+10. Como usar GIF
+
+GIF funciona como imagem comum.
+
+Pode ser usado para:
+
+- mostrar uma rotina curta
+- demonstrar um clique ou processo rapido
+
+11. Como usar video
+
+No formato atual do portal, o suporte pronto e para:
+
+- YouTube
+- Vimeo
+
+Para usar:
+
+1. copie o link do video
+2. cole o link sozinho em uma linha no conteudo do manual
+
+12. O que publicar neste portal
+
+Este portal e voltado somente para clientes.
+
+Publicar aqui:
+
+- tutoriais de uso
+- passo a passo de rotinas
+- duvidas frequentes
+- processos operacionais do sistema
+
+Nao publicar aqui:
+
+- conteudo tecnico interno
+- instrucoes sensiveis da equipe
+- procedimentos exclusivos de suporte interno
+
+13. Boas praticas ao criar manuais
+
+- use titulo claro
+- escreva passo a passo simples
+- use imagens quando ajudar
+- evite texto muito tecnico para clientes
+- revise antes de publicar
+- mantenha o conteudo objetivo
+
+14. Como organizar melhor os manuais
+
+- escolha a categoria certa
+- mantenha nomes padronizados
+- evite criar dois manuais sobre a mesma coisa
+- atualize manuais antigos quando necessario
+
+15. O que acontece quando publicar
+
+Quando um manual ou categoria e publicado:
+
+- a alteracao vai para o repositario do projeto
+- o site faz uma nova publicacao automaticamente
+- depois disso o conteudo aparece atualizado para o cliente
+
+16. Responsabilidade da equipe
+
+Como nao existe aprovacao antes de publicar, quem editar precisa ter cuidado com:
+
+- erros de digitacao
+- informacao desatualizada
+- categoria errada
+- conteudo incompleto
+
+17. Resumo rapido
+
+Use o admin para:
+
+- criar
+- editar
+- excluir
+- organizar
+- publicar
+
+O objetivo do portal e ajudar o cliente com conteudo claro, simples e facil de encontrar.

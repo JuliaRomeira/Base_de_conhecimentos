@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Base de Conhecimento - Dark Mode Design System
+ * Cor de destaque: azul suave alinhado a identidade da marca
+ * Todas as cores em HSL.
+ */
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 222 47% 8%;
+    --foreground: 220 14% 91%;
+
+    --card: 220 27% 14%;
+    --card-foreground: 220 14% 91%;
+
+    --popover: 222 39% 11%;
+    --popover-foreground: 220 14% 91%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 24% 20%;
+    --accent-foreground: 220 14% 95%;
+
+    --secondary: 220 24% 17%;
+    --secondary-foreground: 220 14% 91%;
+
+    --border: 220 18% 22%;
+    --input: 220 18% 22%;
+
+    /* Primary - azul corporativo suave */
+    --primary: 221 84% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 223 94% 64%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 221 84% 56%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 222 39% 11%;
+    --sidebar-foreground: 220 14% 91%;
+    --sidebar-primary: 221 84% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 24% 16%;
+    --sidebar-accent-foreground: 220 14% 95%;
+    --sidebar-border: 220 18% 18%;
+    --sidebar-ring: 221 84% 56%;
+
+    /* Callouts */
+    --callout-note: 217 91% 60%;
+    --callout-tip: 172 76% 50%;
+    --callout-important: 221 84% 56%;
+    --callout-warning: 38 92% 60%;
+    --callout-caution: 0 84% 65%;
+
+    /* Effects */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 4% / 0.4);
+    --shadow-md: 0 4px 12px -2px hsl(222 47% 4% / 0.4);
+    --shadow-glow: 0 0 32px -8px hsl(var(--primary) / 0.35);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  code,
+  pre,
+  kbd {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  .prose-doc {
+    @apply text-foreground leading-relaxed;
+  }
+
+  .prose-doc h1 {
+    @apply text-3xl font-bold mt-0 mb-6 tracking-tight scroll-mt-24;
+  }
+
+  .prose-doc h2 {
+    @apply text-2xl font-semibold mt-10 mb-4 tracking-tight scroll-mt-24 pb-2 border-b border-border;
+  }
+
+  .prose-doc h3 {
+    @apply text-xl font-semibold mt-8 mb-3 tracking-tight scroll-mt-24;
+  }
+
+  .prose-doc h4 {
+    @apply text-lg font-semibold mt-6 mb-2 scroll-mt-24;
+  }
+
+  .prose-doc p {
+    @apply my-4 text-foreground/90;
+  }
+
+  .prose-doc a {
+    @apply text-primary font-medium underline-offset-4 hover:underline transition-colors;
+  }
+
+  .prose-doc strong {
+    @apply text-foreground font-semibold;
+  }
+
+  .prose-doc ul {
+    @apply my-4 ml-6 list-disc space-y-2 marker:text-muted-foreground;
+  }
+
+  .prose-doc ol {
+    @apply my-4 ml-6 list-decimal space-y-2 marker:text-muted-foreground;
+  }
+
+  .prose-doc li {
+    @apply text-foreground/90;
+  }
+
+  .prose-doc li > p {
+    @apply my-1;
+  }
+
+  .prose-doc blockquote {
+    @apply my-4 border-l-4 border-primary/60 bg-card/50 pl-4 py-2 italic text-muted-foreground rounded-r;
+  }
+
+  .prose-doc code:not(pre code) {
+    @apply px-1.5 py-0.5 rounded bg-muted text-primary text-[0.875em] font-medium;
+  }
+
+  .prose-doc pre {
+    @apply my-5 rounded-lg overflow-x-auto text-sm border border-border shadow-md;
+  }
+
+  .prose-doc table {
+    @apply my-5 w-full border-collapse text-sm overflow-hidden rounded-lg border border-border;
+  }
+
+  .prose-doc thead {
+    @apply bg-muted;
+  }
+
+  .prose-doc th {
+    @apply px-4 py-2 text-left font-semibold border-b border-border;
+  }
+
+  .prose-doc td {
+    @apply px-4 py-2 border-b border-border/60;
+  }
+
+  .prose-doc tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .prose-doc hr {
+    @apply my-8 border-border;
+  }
+
+  .prose-doc img {
+    @apply rounded-lg shadow-md border border-border my-5 cursor-zoom-in transition-transform hover:scale-[1.01];
+  }
+
+  .prose-doc .heading-anchor {
+    @apply ml-2 text-muted-foreground/40 opacity-0 transition-opacity no-underline;
+  }
+
+  .prose-doc h1:hover .heading-anchor,
+  .prose-doc h2:hover .heading-anchor,
+  .prose-doc h3:hover .heading-anchor,
+  .prose-doc h4:hover .heading-anchor {
+    @apply opacity-100;
+  }
+}
