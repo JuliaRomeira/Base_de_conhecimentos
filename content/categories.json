@@ -17,6 +17,12 @@
       "title": "FAQ",
       "description": "Respostas para as perguntas mais frequentes.",
       "icon": "HelpCircle"
+    },
+    {
+      "icon": "ScrollText",
+      "slug": "Como emitir uma NFe ",
+      "title": "Como emitir uma NFe ",
+      "description": "Tudo que você precisa para começar a emitir NFe"
     }
   ]
 }
