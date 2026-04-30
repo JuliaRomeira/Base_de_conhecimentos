@@ -4,15 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Painel Admin · Base de Conhecimento</title>
-    <!-- Netlify Identity widget -->
+    <title>Painel Admin - Facil Informatica</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      // Redirect to /admin/ after Netlify Identity login
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", function (user) {
           if (!user) {
