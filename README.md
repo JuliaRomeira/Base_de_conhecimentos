@@ -23,8 +23,8 @@ Este portal foi pensado para:
 - o conteúdo poderá usar imagens, GIFs e vídeos externos suportados;
 - conteúdos internos da equipe ficarão em um projeto separado no futuro.
 
-##  Tecnologias usadas
-
+### Tecnologias usadas
+---
 - `React 18`
 - `TypeScript`
 - `Vite`
