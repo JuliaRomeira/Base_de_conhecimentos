@@ -11,7 +11,7 @@ public_folder: "/uploads"
 
 site_url: https://base-de-conhecimento-facil.netlify.app
 display_url: https://base-de-conhecimento-facil.netlify.app
-logo_url: https://base-de-conhecimento-facil.netlify.app/favicon.ico
+logo_url: https://base-de-conhecimento-facil.netlify.app/favicon.svg
 
 locale: 'pt'
 
