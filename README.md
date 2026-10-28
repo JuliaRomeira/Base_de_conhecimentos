@@ -1,5 +1,13 @@
 # Central de Conhecimento da Fácil Informática
 
+[**Ver demonstração do portal**](https://base-de-conhecimento-facil.netlify.app/)
+
+![Interface da Base de Conhecimento](https://raw.githubusercontent.com/JuliaRomeira/portfolio-julia/main/assets/galeria-base.png)
+
+> Projeto de documentação para clientes. Antes de divulgar novos procedimentos, dados ou capturas, confirme que o conteúdo está autorizado para uso público.
+
+
+
 Portal de documentação para clientes da Fácil Informática, criado para publicar manuais, tutoriais e perguntas frequentes de forma simples, sem banco de dados e sem backend tradicional.
 
 O site foi construído com `React`, `Vite`, `TypeScript`, `Tailwind CSS` e `Decap CMS`. Todo o conteúdo fica versionado em arquivos dentro do próprio repositório, e a edição pode ser feita pelo painel `/admin` quando o projeto estiver publicado na Netlify.
@@ -332,3 +340,7 @@ Depois da publicação, a manutenção ideal é:
 ## Licença
 
 Uso interno da equipe e adaptação conforme a necessidade do projeto.
+
+## Testes e qualidade
+
+O projeto possui configuração de **Vitest** (`npm run test`) e **ESLint** (`npm run lint`). Os testes existentes ainda são básicos e não demonstram, por si só, cobertura das funcionalidades de busca, navegação ou publicação. Os próximos testes devem exercitar esses fluxos reais.
