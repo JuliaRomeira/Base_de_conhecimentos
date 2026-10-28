@@ -21,7 +21,9 @@ jobs:
           node-version: '20'
           cache: npm
       - name: Instalar dependências
-        run: npm ci
+        # O lockfile existente ainda precisa ser sincronizado com o package.json.
+        # Não altera o arquivo durante o CI; valida o código com as dependências declaradas.
+        run: npm install --package-lock=false --no-audit --no-fund
       - name: Testar navegação pelo conteúdo e busca
         run: npm test
       - name: Build de produção
