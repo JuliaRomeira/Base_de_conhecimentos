@@ -343,4 +343,6 @@ Uso interno da equipe e adaptação conforme a necessidade do projeto.
 
 ## Testes e qualidade
 
-O projeto possui configuração de **Vitest** (`npm run test`) e **ESLint** (`npm run lint`). Os testes existentes ainda são básicos e não demonstram, por si só, cobertura das funcionalidades de busca, navegação ou publicação. Os próximos testes devem exercitar esses fluxos reais.
+A suíte de **Vitest** (`npm test`) inclui verificações de carregamento de artigos Markdown, organização por categorias, ordem dos manuais, busca e artigos relacionados. O **GitHub Actions** executa os testes e o build de produção em pull requests e na branch `main`. O **ESLint** está disponível via `npm run lint`.
+
+A cobertura ainda **não inclui** testes de interface ponta a ponta nem autenticação e publicação de artigos no painel `/admin`. Esses fluxos precisam de validação adicional antes do uso em produção.
