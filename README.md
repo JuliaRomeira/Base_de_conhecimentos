@@ -2,7 +2,7 @@
 
 [**Ver demonstração do portal**](https://base-de-conhecimento-facil.netlify.app/)
 
-![Interface da Base de Conhecimento](https://raw.githubusercontent.com/JuliaRomeira/portfolio-julia/main/assets/galeria-base.png)
+![Interface da Base de Conhecimento](docs/images/interface.png)
 
 > Projeto de documentação para clientes. Antes de divulgar novos procedimentos, dados ou capturas, confirme que o conteúdo está autorizado para uso público.
 
